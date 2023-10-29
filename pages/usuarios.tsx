@@ -1,3 +1,4 @@
+import { AccionesDeUsuario } from "@/components/users/AccionesDeUsuario";
 import { API_ROUTES, fetcher } from "@/service/apiConfig";
 import useSWR from "swr";
 
@@ -16,6 +17,7 @@ const PaginaUsuarios = () => {
                             <th>Imagen</th>
                             <th>Nombre</th>
                             <th>Correo</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,16 +25,19 @@ const PaginaUsuarios = () => {
                             <td>test</td>
                             <td>nombre1</td>
                             <td>correo@gmail.com</td>
+                            <td><AccionesDeUsuario/></td>
                         </tr>
                         <tr>
                             <td>test</td>
                             <td>nombre2</td>
                             <td>correo@gmail.com</td>
+                            <td><AccionesDeUsuario/></td>
                         </tr>
                         <tr>
                             <td>test</td>
                             <td>nombre3</td>
                             <td>correo@gmail.com</td>
+                            <td><AccionesDeUsuario/></td>
                         </tr>
                         {/*data.users.map((user) =>{
                             return(
@@ -49,6 +54,10 @@ const PaginaUsuarios = () => {
         </main>
 
     )
-}
+};
+
+
+
+
 
 export default PaginaUsuarios;

@@ -1,13 +1,12 @@
-import { Navbar } from '@/components/Navbar';
-import { Navegacion } from '@/components/Navegacion';
+import { Navbar } from '@/components/ui/Navbar/Navbar';
+import { Navegacion } from '@/components/ui/Navegacion/Navegacion';
 
 const Home = () => {
   return (
     <main className='flex flex-col w-full h-screen items-center gap-5'>
-      <Navbar/>
       <h1>Sistema de recogidas y despachos</h1>
 
-      <div className="flex justify-around gap-5">
+      <div className='flex justify-around gap-5'>
         <Navegacion
           titulo='Lotes'
           descripcion='Gestionar lotes de la finca'
@@ -25,7 +24,7 @@ const Home = () => {
           href='/envios'
         />
 
-<Navegacion
+        <Navegacion
           titulo='Usuarios'
           descripcion='Crear y visualizar usuarios'
           href='/usuarios'
