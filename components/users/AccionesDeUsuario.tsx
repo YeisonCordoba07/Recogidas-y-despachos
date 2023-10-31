@@ -3,7 +3,11 @@ import { Tooltip } from '@/components/Tooltip/Tooltip';
 import { DialogoBorrarUsuario } from '@/components/users/DialogoBorrarUsuario';
 import { useState } from 'react';
 
-const AccionesDeUsuario = () => {
+interface EntradasAccionesDeUsuario{
+  usuario: any;
+}
+
+const AccionesDeUsuario = ({usuario}:EntradasAccionesDeUsuario) => {
   const [abrirBorrarUsuario, setAbrirBorrarUsuario] = useState(false);
 
 
@@ -22,6 +26,7 @@ const AccionesDeUsuario = () => {
       <DialogoBorrarUsuario
         open={abrirBorrarUsuario}
         setOpen={setAbrirBorrarUsuario}
+        usuario={usuario}
       />
     </div>
   );

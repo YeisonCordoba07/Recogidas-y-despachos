@@ -1,4 +1,6 @@
 import { Navbar } from "@/components/ui/Navbar/Navbar";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 interface EntradasLayout{
@@ -10,6 +12,7 @@ const Layout = ({children}:EntradasLayout) => {
         <main>
             <Navbar />
             {children}
+            <ToastContainer/>
         </main>
     );
 };

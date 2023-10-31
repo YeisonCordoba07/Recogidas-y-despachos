@@ -1,7 +1,8 @@
-const SERVER_URL = 'https://dj5pypyyfj.execute-api.us-east-1.amazonaws.com/prod/';
+const SERVER_URL = 'http://localhost:8080/api';
 
 const API_ROUTES = {
-    users: `${SERVER_URL}/users`,
+    allUsers: `${SERVER_URL}/socio/findAll`,
+    getUser: `${SERVER_URL}/socio/findSocioByCedula`,
 };
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
