@@ -1,4 +1,3 @@
-import { Navbar } from '@/components/ui/Navbar/Navbar';
 import { Navegacion } from '@/components/ui/Navegacion/Navegacion';
 
 const Home = () => {

@@ -1,9 +1,10 @@
 import { AccionesDeUsuario } from '@/components/users/AccionesDeUsuario';
 import { API_ROUTES, fetcher } from '@/service/apiConfig';
+import { User } from '@/types/User';
 import useSWR from 'swr';
 
 const PaginaUsuarios = () => {
-  const { data, isLoading, error } = useSWR(API_ROUTES.allUsers, fetcher);
+  const { data, isLoading, error } = useSWR<User[]>(API_ROUTES.allUsers, fetcher);
 
   //console.log(data, isLoading, error);
 
@@ -42,18 +43,18 @@ const PaginaUsuarios = () => {
               <td>nombre3</td>
               <td>correo@gmail.com</td>
               <td>
-                <AccionesDeUsuario usuario='4000' />
+                <AccionesDeUsuario usuario={'4000'} />
               </td>
             </tr>
             {isLoading === false &&
-              data.map((user) => {
+              data?.map((user) => {
                 return (
                   <tr key={user.cedula}>
                     <td>{user.cedula}</td>
                     <td>{user.nombre}</td>
                     <td>{user.usuario}</td>
                     <td>
-                      <AccionesDeUsuario usuario={user.cedula} />
+                      <AccionesDeUsuario usuario={user} />
                     </td>
                   </tr>
                 );

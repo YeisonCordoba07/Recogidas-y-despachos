@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface EntradasNavegacion{
-    titulo: String;
+    titulo: string;
     descripcion: string;
     href: string;
 }
