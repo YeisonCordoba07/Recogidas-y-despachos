@@ -44,7 +44,7 @@ const DialogoBorrarUsuario = ({ open, setOpen, usuario }: DBUEntradas) => {
       open={open}
       onClose={() => { setOpen(false); }} titulo='Borrar usuario'>
       <div className="flex  flex-col gap-5">
-        <span>Se borrará el usuario {usuario} ¿Está seguro?</span>
+        <span>Se borrará el usuario {usuario.cedula} ¿Está seguro?</span>
         <div className="flex gap-5 justify-center items-center">
 
           <button className="bg-blue-500 p-3 rounded-lg text-white font-semibold hover:bg-blue-700 shadow-xl hover:scale-110 disabled:bg-gray-200"

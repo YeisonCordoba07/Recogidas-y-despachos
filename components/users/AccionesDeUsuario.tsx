@@ -3,19 +3,23 @@ import { Tooltip } from '@/components/Tooltip/Tooltip';
 import { DialogoBorrarUsuario } from '@/components/users/DialogoBorrarUsuario';
 import { useState } from 'react';
 import { User } from '@/types/User';
+import { DialogoEditarUsuario } from '@/components/users/DialogoEditarUsuario';
 
-interface EntradasAccionesDeUsuario{
+interface EntradasAccionesDeUsuario {
   usuario: User;
 }
 
-const AccionesDeUsuario = ({usuario}:EntradasAccionesDeUsuario) => {
+const AccionesDeUsuario = ({ usuario }: EntradasAccionesDeUsuario) => {
   const [abrirBorrarUsuario, setAbrirBorrarUsuario] = useState(false);
+  const [abrirEditarUsuario, setAbrirEditarUsuario] = useState(false);
 
 
   return (
     <div className='flex gap-4 text-3xl'>
       <Tooltip texto='Editar'>
-        <MdOutlineModeEditOutline className='hover:text-orange-400 cursor-pointer' />
+        <button onClick={() => setAbrirEditarUsuario(true)}>
+          <MdOutlineModeEditOutline className='hover:text-orange-400 cursor-pointer' />
+        </button>
       </Tooltip>
 
       <Tooltip texto='Borrar'>
@@ -29,6 +33,11 @@ const AccionesDeUsuario = ({usuario}:EntradasAccionesDeUsuario) => {
         setOpen={setAbrirBorrarUsuario}
         usuario={usuario}
       />
+
+      <DialogoEditarUsuario
+        open={abrirEditarUsuario}
+        setOpen={setAbrirEditarUsuario}
+        usuario={usuario} />
     </div>
   );
 };
