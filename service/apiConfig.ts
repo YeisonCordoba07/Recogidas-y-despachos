@@ -1,8 +1,9 @@
-const SERVER_URL = 'http://localhost:8080/api';
+const SERVER_URL = 'http://localhost:8080/api/socio';
 
 const API_ROUTES = {
-    allUsers: `${SERVER_URL}/socio/findAll`,
-    getUser: `${SERVER_URL}/socio/findSocioByCedula`,
+    allUsers: `${SERVER_URL}/findAll`,
+    getUser: `${SERVER_URL}/findSocioByCedula`,
+    updateUser: `${SERVER_URL}/update`,
 };
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
