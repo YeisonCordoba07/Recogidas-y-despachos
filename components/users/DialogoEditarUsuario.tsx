@@ -6,7 +6,7 @@ import { Dispatch, SetStateAction, SyntheticEvent, useState } from "react";
 import { toast } from "react-toastify";
 import useSWR, { mutate } from "swr";
 
-interface DBUEntradas {
+interface DEUEntradas {
     open: boolean;
     setOpen: Dispatch<SetStateAction<boolean>>;
     usuario: User;
@@ -16,7 +16,7 @@ interface DBUEntradas {
 
 
 
-const DialogoEditarUsuario = ({ open, setOpen, usuario }: DBUEntradas) => {
+const DialogoEditarUsuario = ({ open, setOpen, usuario }: DEUEntradas) => {
 
     const actualizarUsuario = async (e: SyntheticEvent) =>{
         //Prevenir que se envie dos veces
@@ -71,7 +71,7 @@ const DialogoEditarUsuario = ({ open, setOpen, usuario }: DBUEntradas) => {
                 <div className="flex gap-5 justify-center items-center">
 
                     <button type="submit" 
-                    onClick={() => {}}className="bg-blue-500 p-3 rounded-lg text-white font-semibold hover:bg-blue-700 shadow-xl hover:scale-110 disabled:bg-gray-200">
+                    onClick={() => {}} className="bg-blue-500 p-3 rounded-lg text-white font-semibold hover:bg-blue-700 shadow-xl hover:scale-110 disabled:bg-gray-200">
                       Guardar
                     </button>
 

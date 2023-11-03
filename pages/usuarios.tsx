@@ -1,6 +1,8 @@
 import { AccionesDeUsuario } from '@/components/users/AccionesDeUsuario';
+import { DialogoCrearUsuario } from '@/components/users/DialogoCrearUsuario';
 import { API_ROUTES, fetcher } from '@/service/apiConfig';
 import { User } from '@/types/User';
+import { useState } from 'react';
 import useSWR from 'swr';
 
 const PaginaUsuarios = () => {
@@ -8,9 +10,13 @@ const PaginaUsuarios = () => {
 
   //console.log(data, isLoading, error);
 
+  const [abrirDCrearUsuario, setAbrirDAbrirUsuario] = useState(false);
+
   return (
-    <main className='flex flex-col justify-center gap-5 w-full'>
+    <main className='flex flex-col items-center gap-5 w-full'>
       <h1>Página Usuarios</h1>
+      <button onClick={() => setAbrirDAbrirUsuario(true)}
+      className="bg-blue-500 p-3 rounded-lg text-white font-semibold hover:bg-blue-700 shadow-xl hover:scale-110 disabled:bg-gray-200 w-72">Crear usuario</button>
       <section className='flex justify-center'>
         <table cellSpacing='0'>
           <thead>
@@ -62,6 +68,8 @@ const PaginaUsuarios = () => {
           </tbody>
         </table>
       </section>
+      <DialogoCrearUsuario open={abrirDCrearUsuario} setOpen={setAbrirDAbrirUsuario} 
+      usuario="5000"/>
     </main>
   );
 };
