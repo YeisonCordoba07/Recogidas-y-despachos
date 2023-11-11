@@ -2,11 +2,11 @@ import { MdDeleteOutline, MdOutlineModeEditOutline } from 'react-icons/md';
 import { Tooltip } from '@/components/Tooltip/Tooltip';
 import { DialogoBorrarUsuario } from '@/components/users/DialogoBorrarUsuario';
 import { useState } from 'react';
-import { User } from '@/types/User';
+import { Socio } from '@/types/User';
 import { DialogoEditarUsuario } from '@/components/users/DialogoEditarUsuario';
 
 interface EntradasAccionesDeUsuario {
-  usuario: User;
+  usuario: Socio;
 }
 
 const AccionesDeUsuario = ({ usuario }: EntradasAccionesDeUsuario) => {

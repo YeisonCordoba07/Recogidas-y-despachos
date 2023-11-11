@@ -1,4 +1,4 @@
-export interface User {
+export interface Socio {
     cedula: number;
     nombre: string;
     ciudad: number;
@@ -11,5 +11,5 @@ export interface User {
 }
 
 export interface UsersQuery{
-    users: User[];
+    socios: Socio[];
 }

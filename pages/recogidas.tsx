@@ -1,12 +1,12 @@
 import { AccionesDeUsuario } from '@/components/users/AccionesDeUsuario';
 import { DialogoCrearUsuario } from '@/components/users/DialogoCrearUsuario';
 import { API_ROUTES, fetcher } from '@/service/apiConfig';
-import { User } from '@/types/User';
+import { Socio } from '@/types/User';
 import { inputAdornmentClasses } from '@mui/material';
 import useSWR from 'swr';
 
 const PaginaRecogidas = () => {
-    const { data, isLoading, error } = useSWR<User[]>(API_ROUTES.allUsers, fetcher);
+    const { data, isLoading, error } = useSWR<Socio[]>(API_ROUTES.allUsers, fetcher);
     return (
         <main className='flex flex-col items-center gap-5 w-full'>
       <h1>Página Recogidas</h1>

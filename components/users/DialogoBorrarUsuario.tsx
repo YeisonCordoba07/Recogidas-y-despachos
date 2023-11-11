@@ -6,12 +6,12 @@ import { API_ROUTES } from '@/service/apiConfig';
 import { toast } from 'react-toastify';
 import { Spinner } from '@/components/ui/Spinner';
 import { mutate } from 'swr';
-import { User } from '@/types/User';
+import { Socio } from '@/types/User';
 
 interface DBUEntradas {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
-  usuario: User;
+  usuario: Socio;
 }
 
 

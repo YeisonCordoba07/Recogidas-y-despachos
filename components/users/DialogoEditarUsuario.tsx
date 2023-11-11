@@ -1,6 +1,6 @@
 import { Dialogo } from "@/components/ui/Dialog/Dialogo";
 import { API_ROUTES } from "@/service/apiConfig";
-import { User } from "@/types/User";
+import { Socio } from "@/types/User";
 import axios from "axios";
 import { Dispatch, SetStateAction, SyntheticEvent, useState } from "react";
 import { toast } from "react-toastify";
@@ -9,7 +9,7 @@ import useSWR, { mutate } from "swr";
 interface DEUEntradas {
     open: boolean;
     setOpen: Dispatch<SetStateAction<boolean>>;
-    usuario: User;
+    usuario: Socio;
 }
 
 
@@ -29,7 +29,7 @@ const DialogoEditarUsuario = ({ open, setOpen, usuario }: DEUEntradas) => {
                 url: `${API_ROUTES.updateUser}`,
                 data: {
                     "cedula": 1000,
-                    "nombre": "Juan A Perez",
+                    "nombre": "Juan A. Perez",
                     "ciudad": 12345,
                     "usuario": "juanperez123",
                     "clave": "clave123",

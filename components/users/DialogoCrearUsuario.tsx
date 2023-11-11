@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, SyntheticEvent, useState } from "react";
 import { Dialogo } from "../ui/Dialog/Dialogo";
-import { User } from "@/types/User";
+import { Socio } from "@/types/User";
 import { API_ROUTES } from "@/service/apiConfig";
 import { toast } from "react-toastify";
 import { mutate } from "swr";
@@ -10,7 +10,7 @@ import axios from "axios";
 interface DCUEntradas {
     open: boolean;
     setOpen: Dispatch<SetStateAction<boolean>>;
-    usuario: User;
+    usuario: Socio;
 }
 const DialogoCrearUsuario = ({ open, setOpen, usuario }: DCUEntradas) => {
 
