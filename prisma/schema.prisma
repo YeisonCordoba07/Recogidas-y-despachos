@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+
+// Definición de la tabla Socio
+model Socio {
+  cedula                    Int           @id
+  nombre                    String
+  ciudad                    Int?
+  usuario                   String?
+  clave                     String
+  numero_de_servicios       Int?
+  promedio_de_calificacion  Float?
+  numero_de_amonestaciones  Int?
+  numero_de_felicitaciones  Int?    
+}

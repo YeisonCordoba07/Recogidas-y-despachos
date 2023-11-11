@@ -2,6 +2,7 @@ import { AccionesDeUsuario } from '@/components/users/AccionesDeUsuario';
 import { DialogoCrearUsuario } from '@/components/users/DialogoCrearUsuario';
 import { API_ROUTES, fetcher } from '@/service/apiConfig';
 import { User } from '@/types/User';
+import { inputAdornmentClasses } from '@mui/material';
 import useSWR from 'swr';
 
 const PaginaRecogidas = () => {
