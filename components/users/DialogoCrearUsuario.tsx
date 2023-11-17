@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, SyntheticEvent, useState } from "react";
-import { Dialogo } from "../ui/Dialog/Dialogo";
+import { Dialogo } from "@/components/ui/Dialog/Dialogo";
 import { Socio } from "@/types/User";
 import { API_ROUTES } from "@/service/apiConfig";
 import { toast } from "react-toastify";
@@ -29,7 +29,7 @@ const [nuevoUsuario, setNuevoUsuario] = useState({
 
 const submitForm = async (e: SyntheticEvent) =>{
     e.preventDefault();
-    console.log(nuevoUsuario);
+    //console.log(nuevoUsuario);
 
     try{
         await axios.request({
